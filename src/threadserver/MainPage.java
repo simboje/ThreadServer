@@ -21,7 +21,7 @@ public class MainPage extends javax.swing.JFrame
     String userName;
     int portNumber = 6999;
     ServerSocket serverSocket;
-    ArrayList<UserOutput> printerList=new ArrayList();
+    ArrayList<UserOutput> printerList=new ArrayList();  // UserOutput class contains PrintWriter to specific user and String with username of that user
     public MainPage() 
     {
         initComponents();
