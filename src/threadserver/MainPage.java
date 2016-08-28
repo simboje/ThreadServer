@@ -100,7 +100,7 @@ public class MainPage extends javax.swing.JFrame
         } 
         catch (IOException ex) 
         {
-            jTextArea1.append("Error while saving PORT number value.\n");
+            jTextArea1.append("Error while saving PORT number value.\n"+ex.toString());
         }    
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -130,6 +130,7 @@ public class MainPage extends javax.swing.JFrame
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new MainPage().setVisible(true);
             }
@@ -153,6 +154,7 @@ public class MainPage extends javax.swing.JFrame
             {
                 BufferedReader bread = new BufferedReader(new FileReader("settings.set"));
                 portNumber = Integer.parseInt(bread.readLine());
+                jTextField1.setText(portNumber+"");
                 bread.close();
             }
             catch (IOException ex)
